@@ -1,0 +1,169 @@
+.guestContainer {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--color-blue-light-bg) 0%, var(--color-white) 50%, var(--color-blue-medium-bg) 100%);
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .guestContainer {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .guestContainer {
+    padding: 5rem 2rem;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2f7bc7;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  width: 70%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (max-width: 639px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.guestCard {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  position: relative;
+  padding: 2px;
+
+}
+
+.guestCard:hover {
+  transform: translateY(-10px) scale(1.007);
+  box-shadow: 0 15px 40px rgba(48, 159, 223, 0.242);
+}
+
+.guestImageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a86f3a3 0%, #f4f6f7 50%, #9ecaefdb 100%);
+}
+.guests-grid > :last-child {
+  grid-column: 2 / span 2;
+  justify-self: center;    
+}
+
+@media (max-width: 640px) {
+  .guestImageContainer {
+    padding-top: 90%;
+  }
+}
+
+.guestImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  
+}
+.guestJaitender{
+  transform: rotateY(180deg)
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.guestCard:hover .imageOverlay {
+  opacity: 0.9;
+}
+
+.guestInfo {
+  padding: 1.25rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.913);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .guestInfo {
+    padding: 1.5rem;
+  }
+}
+
+.guestName {
+  font-size: 1.25rem;
+  color: #14385d;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.guestTitle {
+  font-size: 0.9rem;
+  color: #2b6cad;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .guestName {
+    font-size: 1.5rem;
+  }
+  
+  .guestTitle {
+    font-size: 1rem;
+  }
+}
+
+.guestDescription {
+  color: #7f8c8d;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
